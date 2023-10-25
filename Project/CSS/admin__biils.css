@@ -1,0 +1,30 @@
+section{
+    font-size: 1.2vw;
+    /* height: 50vw; */
+}
+
+
+section h1{
+    margin-bottom: 2vw;
+    color: brown;
+    font-size: 2.5vw;
+}
+
+section p{
+    font-size: 1vw;
+}
+.viewBillProduct{
+    text-align: left;
+    padding: 5px;
+    display: none;
+}
+section button{
+    font-size: 1.2vw;
+
+}
+section u {
+    padding: 2px;
+}
+section u:hover{
+    color: brown;
+}

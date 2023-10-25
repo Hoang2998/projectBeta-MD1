@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .contain{
+            width: 100%;
+            padding: 10px;
+            /* overflow: hidden; */
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            
+        }
+        .same{
+            width: 24vw;
+            height: 30vw;
+        }
+        @media only screen and (max-width: 500px){
+            .contain{
+                grid-template-columns: auto;
+            }
+            .same{
+                width: 100%;
+                height: 120vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- bootstrap laf gi?
+    thư viện giúp sử dụng ui nhanh chóng , hỗ trợ responsive(tương thích giữa các màn hình)
+    cách dùng : hiện tại bootstap 5.
+    các điểm breakpoint trong bootstrap
+    576px 
+    576px < mh < 768px
+    768px < mh < 992px
+    992px < mh < 1200px
+    1200px < mh < 1400px
+    >1400 px
+    
+    mobile Fist
+    thiết kế trên màn hình điện thoại trước
+    đi từ màn hình bé đến màn hình lớn thì sẽ dùng max-width;
+    đi từ lớn xuống bé
+    desktop first
+    thiết kế trên máy tính trước 
+    -đi từ màn hình lớn xuống màn hình bé thif dùng Min-width;
+    -->
+    <div class="contain">
+        <div ><img src="../Project/img/che1.jpg" class="same"></div>
+        <div ><img src="../Project/img/che2.jpg" class="same" alt=""></div>
+        <div ><img src="../Project/img/che3.jpg" class="same" alt=""></div>
+        <div ><img src="../Project/img/che4.jpg" class="same" alt=""></div>
+        <div ><img src="../Project/img/che5.jpg" class="same" alt=""></div>
+        <div ><img src="../Project/img/meoThantai.png!bw700" class="same" alt=""></div>
+        <div ><img src="../Project/img/sec31.jpg" class="same" alt=""></div>
+        <div ><img src="../Project/img/sec32.jpg" class="same" alt=""></div>
+      
+    </div>
+</body>
+</html>

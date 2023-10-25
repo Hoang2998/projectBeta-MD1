@@ -1,0 +1,79 @@
+.find__address{
+    padding: 1vw 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+.find__address select{
+    width: 70%;
+    height: 3vw;
+    font-size: 1.5vw;
+}
+.find__address button{
+    width: 30%;
+    height: 3vw;
+    background-color: brown;
+    border: none;
+    color: aliceblue;
+    font-size: 1.5vw;
+}
+.containMap{
+    width: 100%;
+    height: 50vw;
+    padding: 1vw 5vw 5vw ;
+    display: flex;
+    gap: 2vw;
+}
+#renderMap{
+    width: 30%;
+    background-color: rgba(241, 229, 207, 0.932);
+    overflow: auto;
+}
+.renderMap__address{
+    width: 100%;
+    /* height: 5vw; */
+}
+.renderMap__address h2{
+    background-color: rgb(227, 179, 92);
+    padding: 0.5vw 1vw;
+}
+.renderMap__address div{
+    /* padding: 0.5vw 1vw; */
+    border-bottom: 1px solid silver;
+}
+#map{
+    width: 70%;
+    background-color: aliceblue;
+
+}
+.render__map p{
+    padding: 0.5vw 1vw;
+}
+.render__map p:hover{
+    background-color: rgb(203, 188, 160);
+}
+.comment{
+    padding: 1vw 5vw 3vw 5vw;
+    font-size: 1.5vw;
+    border-bottom: 1px solid silver;
+    /* color: rgb(10, 84, 10) ; */
+    font-family: cursive;
+}
+.input{
+    width: 100%;
+    height: 18vw;
+    padding: 1vw 5vw 5vw ;
+    display: flex;
+    gap: 2vw;
+    border-bottom: 1px solid silver;
+}
+.input input{
+    border: none;
+    border-bottom: 1px solid silver;
+    background-color: antiquewhite;
+}
+.input select{
+    background-color: antiquewhite;
+}

@@ -1,0 +1,234 @@
+.cart__body{
+    position: relative;
+    padding: 70px 10px 20px 10px;
+    font-size: 12px;   
+    width: 100%;
+    background-color: antiquewhite;
+}
+.cart__body table{
+   border-collapse: collapse;
+   width: 100%;
+   background-color: antiquewhite;
+   text-align: center;
+
+}
+.cart__body tr td {
+    border: 1px solid wheat;
+    color: black;
+}
+.cart__body__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 7vw;
+    /* border: none !important; */
+}
+.cart__body button{
+    width: 4vw;
+    border: 1px solid white;
+    background-color: rgb(170, 48, 48,0.8);
+    color: aliceblue;
+    border-radius: 5px;
+}
+.cart__body button:hover{
+    background-color: rgb(170, 48, 48,1);
+
+}
+.cart__body__button div{
+    width: 3vw;
+}
+.cart__body p {
+    color: rgb(10, 84, 10);
+    padding: 1vw;
+}
+.cart__body p:hover{
+    color: rgb(17, 17, 128);
+
+}
+#pay{
+    background-color: rgb(166, 47, 47,0.8);
+    color: aliceblue;
+    font-size: 14px;
+}
+#pay:hover{
+    background-color: rgb(166, 47, 47,1); 
+    color: rgb(235, 218, 186);
+
+}
+.cart__address{
+    position: fixed;
+    top:-35vw;
+    width: 80vw;
+    height: 35.5vw;
+    background-color: aliceblue;
+    z-index: 10;
+    margin-left: 10vw;
+    transition: 1s;
+    padding: 2vw;
+
+}
+.close__address{
+    text-align: center;
+    background-color: brown;
+    color: antiquewhite;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+.cart__address__info{
+    width: 100%;
+    height: 60%;
+    border-radius: 2vw;
+    background-color: antiquewhite;
+    padding: 0.5vw;
+}
+.cart__address__info h3 {
+    display: flex;
+    align-items: center;
+    color: brown;
+}
+.totalPay{
+    width: 100%;
+    height: 25%;
+    border-radius: 2vw;
+    background-color: antiquewhite;
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+.totalPay button{
+    border-radius: 2vw;
+    background-color: brown;
+    color: aliceblue;
+    border-color: wheat ;
+    padding: 8px 12px;
+}
+.same__input{
+    display: flex;
+    width: 80%;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0.5vw;
+    margin-left: 2vw;
+
+}
+.same__input input{
+    width: 60%;
+}
+.alertPayAccept{
+    position: absolute;
+    width: 35vw;
+    height: 18vw;
+    background-color: rgba(12, 12, 12,0.9);
+    color: aliceblue;
+    bottom: 100px;
+    left: 22vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+}
+.alert{
+    visibility: visible;
+    animation: alert 1 0.5s linear;
+}
+@keyframes alert {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+.alertCartEmpty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(13, 13, 13,0.9);
+    color: rgb(17, 129, 17);
+    font-size: 20px;
+    width: 60vw;
+    height: 30vw;
+    left: 10vw;
+}
+#historyBills{
+    position: relative;
+    width: 100%;
+    height: 0vw;
+    background-color: rgb(238, 231, 221);
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px 3px rgb(30, 29, 29,0.3) inset;
+    transition: 1s;
+    overflow: auto;
+}
+.historyBills__close{
+    text-align: right;
+    padding: 1vw;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+#historyBills__display{
+    padding: 2vw;
+}
+#historyBills__display table{
+    background-color: rgb(238, 231, 221) !important;
+    width: 100%;
+}
+.btn_Cancel{
+    width: 8vw !important;
+    padding: 0.5vw;
+}
+#historyBills__display tr td   {
+    border-color: brown !important;
+}
+.showBill:hover{
+    color: blue;
+}
+.showBillInfo{
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    background-color: aliceblue;
+    left: 30vw ;
+    top: 8vw;
+    z-index: 100;
+    padding: 2vw;
+    overflow: auto;
+    visibility: hidden;
+}
+.showBillInfo div{
+    /* padding: 2px 0; */
+    display: flex;
+    align-items: center;
+}
+.showBillInfo div p{
+    color: black;
+    padding: 2px;
+    margin: 0 3px;
+
+}
+.showBillInfo span{
+    position: absolute;
+    right: 0.5vw;
+    top: 0.5vw;
+    font-size: 1.5vw;
+}
+.showBillInfo table{
+    background-color: aliceblue;
+    border-collapse:collapse ;
+}
+.showBillInfo tr th {
+    border: 1px solid black;
+}
+.showBillInfo tr td{
+    border: 1px solid black;
+
+}

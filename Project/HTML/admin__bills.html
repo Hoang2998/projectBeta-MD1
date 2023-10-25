@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Project/CSS/admin.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../CSS/admin__biils.css">
+</head>
+
+<body>
+    <header>
+        <input type="text" placeholder="Tìm kiếm đơn hàng theo ID" oninput="findBill()" id="findBill">
+        <div>
+            <div class="bell" onclick="stopRingBell()">
+                <div class="bellalert">
+                    <img src="../img/notification-bell.png" width="90%" height="90%">
+                </div>
+                <div id="numberAlertBell">0</div>
+            </div>
+            <div style="margin-right: 2vw;" onclick="changeMainPage()">
+                <img src="../img/logoWeb.png" width="25%" alt="">
+                <p>Trang chủ</p>
+            </div>
+
+            <span class="material-symbols-outlined logout" onclick="logOut()">
+                logout
+            </span>
+        </div>
+        <div id="displayAlertBell">
+            <div id="displayAlertBell">
+                không có thông báo
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <nav>
+            <div class="nav__avatar">
+                <img src="/Project/img/avatar1.jpg" width="40vw">
+                <p>Aminn 1</p>
+            </div>
+            <div class="nav__menu">
+                <div class="same" onclick="categoryPage()">
+                    <span class="material-symbols-outlined">
+                        monitoring
+                    </span>
+                    <p>Quản lí chung và báo cáo</p>
+                </div>
+                <div class="same" onclick="productPage()">
+                    <span class="material-symbols-outlined">
+                        inventory_2
+                    </span>
+                    <p href="./admin__product.html">Quản lí sản phẩm</p>
+                </div>
+                <div class="same" onclick="usersPage()">
+                    <span class="material-symbols-outlined">
+                        group
+                    </span>
+                    <p>Quản lí người dùng</p>
+                </div>
+                <div class="same" onclick="billsPage()">
+                    <span class="material-symbols-outlined">
+                        receipt_long
+                    </span>
+                    <p>Quản lí đơn hàng</p>
+                </div>
+
+            </div>
+            <div class="tranform">
+                <span class="material-symbols-outlined">
+                    keyboard_backspace
+                </span>
+            </div>
+        </nav>
+        <section>
+            <h1>Quản lí đơn hàng </h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stt</th>
+                        <th>ID</th>
+                        <th>Khách hàng</th>
+                        <th>Địa chỉ</th>
+                        <th>Số điện thoại</th>
+                        <th>Thời gian</th>
+                        <th>Sản phẩm</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                        <th>Quản lí</th>
+                    </tr>
+                </thead>
+                <tbody id="body">
+                    <tr>
+                        <td>Stt</td>
+                        <td>Khách hàng</td>
+                        <td>Địa chỉ</td>
+                        <td>Số điện thoại</td>
+                        <td>Thời gian</td>
+                        <td id="viewBillProduct">
+                        </td>
+                        <th>Tổng tiền</th>
+                        <td>chờ xử lí</td>
+                        <td>
+                            <button>Xác nhận</button>
+                            <button>Hủy đơn</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        function productPage() {
+            window.location.href = "/Project/HTML/admin__product.html"
+        }
+        function usersPage() {
+            window.location.href = "/Project/HTML/admin__users.html"
+        }
+        function billsPage() {
+            window.location.href = "/Project/HTML/admin__bills.html"
+        }
+        function categoryPage() {
+            window.location.href = "/Project/HTML/admin__chart.html"
+        }
+    </script>
+    <script src="../JS/admin/admin.js"></script>
+    <script src="../JS/admin/admin__bills.js"></script>
+</body>
+
+</html>

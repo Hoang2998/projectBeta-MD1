@@ -1,0 +1,460 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+}
+header{
+    display: flex;
+    padding: 1vw 1vw 1vw 1vw ;
+    justify-content: space-between;
+    background-color: rgb(113, 7, 7,0.9);
+    color: rgb(220, 226, 232,0.8);
+    position: fixed;
+  
+    width: 92vw;
+    height: 4vw;
+    left: 8vw;
+    z-index: 1;
+}
+header input{
+    background-color: brown;
+    border: none;
+    padding-left: 1vw;
+    border-radius: 2vw;
+    width: 20vw;
+    color: aliceblue !important;
+    /* margin-left: 30vw; */
+}
+header div{
+    display: flex;
+}
+header img{
+    margin-right: 5px;
+}
+/* header p:hover{
+    color: aliceblue;
+} */
+/* header span:hover{
+    color: aliceblue;
+} */
+.logout{
+    margin-right: 1vw;
+}
+nav{
+    color: rgb(220, 226, 232,0.8);
+    width: 8vw;
+    height: 80vw;
+    background-color: rgb(113, 7, 7,1);
+    z-index: 2;
+    position: fixed;
+    transition: 0.5s;
+    text-align: center;
+}
+nav:hover{
+    width: 20vw;
+    .tranform span{
+        position: relative;
+        rotate: 180deg;
+    }
+    .nav__avatar p{
+        visibility: visible;
+        animation: move 1 2s ;
+    }
+    .same p{
+        display: block;
+        visibility: visible;
+        animation: move 1 2s ;
+    }
+}
+.nav__avatar{
+    position: relative;
+    display: flex;
+    height: 7vw;
+    left: 0;
+    background-color: rgb(0, 0, 0,0.3);
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 1vw;
+
+    /* margin-left: 1vw; */
+    /* justify-content: center; */
+}
+.nav__avatar img{
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    margin-left: 2vw;
+}
+.same{
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    gap: 1vw;
+    height: 4vw;
+    padding: 0vw 1vw;
+    border-radius: 5vw 0 0 5vw ;
+    margin-left: 2vw;
+
+}
+.same span{
+    font-size: 18px;
+}
+.same:hover{
+   
+    color: brown;
+    background-color: antiquewhite;
+
+    /* border-radius: 2vw; */
+}
+.same p{
+    display: none;
+    font-size: 12px;
+}
+.nav__avatar p{
+    visibility: hidden;
+    /* transition: 1s; */
+    
+}
+@keyframes move {
+    0%{
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+}
+.nav__menu{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    /* padding-top: 1vw; */
+
+}
+
+.tranform{
+    position: relative;
+    bottom: -10vw;
+    left: -1vw;
+}
+.tranform span{
+    position: relative;
+    margin-left: 2vw;
+    transition: 0.5s ease-in;
+}
+
+.bell{
+    position: relative;
+    display: flex;
+    margin-right: 1vw;
+}
+.bellalert{
+    /* animation: ring 6s ease-in-out infinite; */
+    transform-origin: 50% 0%;
+}
+#displayAlertBell{
+    position: absolute;
+    right: 2vw;
+    background-color: rgb(242, 235, 226);
+    top: 3.5vw;
+    width: 23vw;
+    height: 30vw;
+    border-radius: 1vw;
+    box-shadow: 2px 2px 2px 2px rgba(10, 10, 10, 0.6);
+    padding: 2vw 1vw;
+    visibility: hidden;
+    color:black;
+    display: flex;
+    flex-direction: column; 
+}
+#displayAlertBell div span{
+    color: brown;
+}
+#displayAlertBell div{
+    margin-bottom: 0.5vw;
+}
+#displayAlertBell div:hover {
+    background-color:rgba(245, 222, 179, 0.806);
+    border-radius: 10px;
+}
+.ringBell{
+    animation: ring 4s ease-in-out infinite;
+}
+@keyframes ring {
+    1%{
+        transform: rotateZ(30deg);
+    }
+    3%{transform: rotateZ(-28deg);}
+    5%{transform: rotateZ(28deg);}
+    7%{transform: rotateZ(-26deg);}
+    9%{transform: rotateZ(26deg);}
+    11%{transform: rotateZ(-24deg);}
+    15%{transform: rotateZ(24deg);}
+    17%{transform: rotateZ(-22deg);}
+    19%{transform: rotateZ(22deg);}
+    21%{transform: rotateZ(-20deg);}
+    23%{transform: rotateZ(20deg);}
+    25%{transform: rotateZ(-18deg);}
+    27%{transform: rotateZ(18deg);}
+    30%{transform: rotateZ(-16deg);}
+    33%{transform: rotateZ(16deg);}
+    35%{transform: rotateZ(-14deg);}
+    37%{transform: rotateZ(14deg);}
+    39%{transform: rotateZ(-12deg);}
+    41%{transform: rotateZ(12deg);}
+    43%{transform: rotateZ(-10deg);}
+    45%{transform: rotateZ(10deg);}
+    47%{transform: rotateZ(-8deg);}
+    49%{transform: rotateZ(8deg);}
+    51%{transform: rotateZ(-6deg);}
+    53%{transform: rotateZ(6deg);}
+    55%{transform: rotateZ(-4deg);}
+    57%{transform: rotateZ(4deg);}
+    59%{transform: rotateZ(-2deg);}
+    61%{transform: rotateZ(2deg);}
+    63%{transform: rotateZ(-1deg);}
+    65%{transform: rotateZ(1deg);}
+    100%{transform: rotateZ(0deg);}
+}
+#numberAlertBell{
+    position: absolute;
+    background-color: brown;
+    color: white;
+    font-size: 0.8vw;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 10px;
+    top: -5px;
+    right: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.statusAlert{
+    color: green;
+}
+.seen{
+    /* display: inline-block; */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: brown;
+}
+
+
+
+section{
+    position: relative;
+    width: 91vw;
+    height: 40vw;
+    /* background-color: aqua; */
+    position: relative;
+    top: 4vw;
+    left: 8vw;
+    padding: 1vw 2vw;
+}
+table{
+    border: 1px solid;
+    border-color: black ;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+th{
+    border: 1px solid;
+    border-color: black ;
+}
+td{
+    border: 1px solid;
+    border-color: black;
+}
+thead button{
+font-size: 8px  !important;
+   font-family: monospace;
+   font-weight:900 ;
+   width: 1.5vw;
+   height: 1.5vw;
+   text-align: center;
+   margin-left: 1vw;
+   background-color: antiquewhite;
+   border-color:wheat ;
+} 
+tbody button{
+    border: none;
+    margin: 2px;
+    padding: 2px 10px;
+    background-color: brown;
+    border-radius: 5px;
+    color: aliceblue;
+    opacity: 0.6;
+}
+tbody button:hover{
+    opacity: 1;
+
+}
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    padding-top: 2vw;
+
+}
+li{
+    list-style: none;
+    width: 1vw;
+    height: 1vw;
+    background-color: rgb(165, 42, 42,0.7);
+    border-radius: 1vw;
+}
+li:hover{
+    background-color: rgb(165, 42, 42,1);
+
+}
+.addProduct{
+ padding-bottom: 4px;
+
+}
+
+.addProduct button{
+ border-radius: 1vw;
+ padding: 0.3vw;
+ border-color: wheat ;
+ background-color: rgb(165, 43, 43,0.7);
+ color: antiquewhite;
+ font-size: 1.2vw;
+ /* margin-top: 2px; */
+}
+.addProduct button:hover{
+ background-color: rgb(165, 43, 43,1);
+
+}
+.alertDelete{
+    position: absolute;
+    background-color: rgb(0, 0, 0,0.9);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 20vw;
+    padding: 2vw;
+    left: 29vw;
+    gap: 2vw;
+    visibility: hidden;
+}
+.alertDelete__display{
+    visibility: visible;
+    animation: display 1 1s;
+}
+@keyframes display {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    
+}
+.alertDelete button{
+    width: 10vw;
+    border-radius: 2vw ;
+    padding: 2px;
+}
+.alertDelete button:hover{
+    background-color: brown;
+    color: aliceblue;
+}
+#viewAddProduct{
+    width: 100%;
+    height: 0vw;
+    background-color:rgb(245, 228, 203);
+    box-shadow: 2px 2px 2px 4px rgb(178, 176, 176) inset;
+    margin-bottom: 1vw;
+    overflow: auto;
+    /* visibility: hidden; */
+    padding-left: 5vw;
+    transition: 1s;
+    /* z-index: -1; */
+    
+}
+.viewNew{
+    padding: 2vw;
+}
+.viewNew table tr td{
+    padding: 0.5vw;
+}
+.viewNew button{
+    padding: 0.2vw;
+    margin-top: 2vw ;
+}
+#viewAddProduct td{
+    border: none;
+}
+#viewAddProduct span{
+    width: 100%;
+    position: relative;
+    text-align: right;
+    padding: 1vw;
+    font-weight: 800;
+    font-size: 2vw;
+
+}
+#viewUpdate{
+    display: flex;
+    width: 0vw;
+    height: 40vw;
+    background-color: rgb(0, 0, 0,0.9);
+    color: aliceblue;
+    position: fixed;
+    top: 4vw;
+    right: 0;
+    transition: 1s;
+}
+#viewUpdate h3{
+    width: 38vw;
+    text-align: center;
+    color: rgb(252, 252, 252);
+    padding: 2vw;
+}
+.closeViewUpdate{
+    height: 100%;
+    background-color: brown;
+    color: rgb(240, 248, 255,0.8);
+    display: flex;
+    align-items: center;
+}
+#displayUpdate{
+    padding: 0vw 3vw;
+}
+#displayUpdate td{
+    border: none;
+}
+.alertAddProducta{
+    position: absolute;
+    background-color: rgba(19, 18, 18,0.92);
+    color: white;
+    width: 30vw;
+    height: 15vw;
+    bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 30vw;
+    bottom: -15vw;
+    opacity: 0;
+    transition: 1s;
+}
+section h1{
+    margin-bottom: 2vw;
+    color: brown;
+    font-size: 2.5vw;
+}

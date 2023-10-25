@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChanghiQuocOai</title>
+    <link rel="icon" href="/Project/img/logoWeb.png">
+    <link rel="stylesheet" href="/Project/CSS/trangchu.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/Project/CSS/address.css">
+</head>
+
+<body>
+    <header id="header">
+        <div><img src="/Project/img/logoWeb.png" alt="" id="header__logo"></div>
+        <div class="displayMenu" onclick="displayMenu()"><span class="material-symbols-outlined">
+            menu
+            </span></div>
+        <nav id="header__nabbar">
+            <a href="/index.html">Trang Chủ</a>
+            <a href="/Project/HTML/info.html">Giới Thiệu</a>
+            <a href="/Project/HTML/menu.html">Thực Đơn</a>
+            <a href="/Project/HTML/store.html">Cửa Hàng</a>
+            <a href="/Project/HTML/contact.html">Liên hệ</a>
+            <div style="position: relative;" onclick="changeCart()">
+                <span class="material-symbols-outlined bag">
+                    shopping_bag
+                </span>
+                <div id="alertProduct">0</div>
+            </div>
+        </nav>
+        <div class="bell" onclick="stopRingBell()">
+            <div class="bellalert">
+                <img src="/Project/img/bell.png" width="90%" height="90%">
+            </div>
+            <div id="numberAlertBell">0</div>
+        </div>
+        <div style="display: flex;align-items: center;"><img src="/Project/img/avatar.jpg" alt="" id="header__avatar"
+                onclick="openInfoUser()"><span id="nameUser"></span></div>
+        <button onclick="logOut()">Login</button>
+        <div id="displayAlertBell">
+            <div
+                style="display: flex;justify-content: center;align-items: center; border-bottom: 1px solid rgb(219, 202, 202);padding: 0.5vw 0;">
+                <p style="width: 80%;">
+                    Đơn hàng <span id="idBill">111</span> <span id="statusBill">da dc xu li</span>
+                </p>
+                <div style=" font-size: 0.8vw;">
+                    <div class="statusAlert">đã đọc </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- pop up infoUser-->
+    <div id="tableInfoUser">
+        <div class="imgAvatar"><img src="/Project/img/avatar1.jpg" alt="" width="120px" height="120px">
+            <label for="click">Thay ảnh đại diện</label>
+            <input type="file" id="click" onchange="changeAvatar(this)">
+        </div>
+        <div class="informationUser">
+            <h3>THÔNG TIN CÁ NHÂN</h3>
+            <label for="">Tên đăng nhập</label>
+            <input type="text" id="info__NameUser">
+            <label for="">Email</label>
+            <input type="text" id="info__EmailUser" oninput="checkEmailUser()">
+            <div id="alertInfoEmail"></div>
+            <div id="alertUpdate"></div>
+            <p>Đổi mật khẩu:</p>
+            <div class="newPassword">
+                <label for="">Mật khẩu hiện tại</label>
+                <input type="password" id="info_PasswordUser" oninput="checkPasswordUser()">
+                <div id="alertInfoPassword"></div>
+                <label for="">Mật khẩu mới</label>
+                <input type="password" id="info_PasswordUserNew" oninput="checkPasswordUserNew()">
+                <div id="alertInfoPasswordNew"></div>
+            </div style="display:flex">
+            <div style="display:flex">
+                <button onclick="updateUser()">Cập Nhập</button>
+                <button onclick="logOut()">Đăng xuất</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="info__main">
+        <div>
+            <img src="/Project/img/address.jpg" alt="" width="100%">
+            <div class="tagInfo">Cửa hàng</div>
+        </div>
+        <div class="find__address">
+            <select name="" id="select" value="">
+                <option value="-1">Chọn thành phố</option>
+                <option value="0">Hà Nội</option>
+                <option value="1">Hồ Chí Minh</option>
+                <option value="2">Hải Phòng</option>
+                <option value="3">Đà Nẵng</option>
+                <option value="4">Đà lạt</option>
+                <option value="5">Huế</option>
+            </select>
+            <button onclick="findAddress()">Tìm kiếm địa chỉ </button>
+        </div>
+        <div class="containMap">
+            <div id="renderMap">
+                <div class="renderMap__address">
+                    <h2>Hà Nội</h2>
+                    <div class="render__map">abc</div>
+                </div>
+            </div>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4429.818903065526!2d105.6365146137675!3d20.99188206458707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313451ece70e4527%3A0xc00dd504737311c8!2sCh%C3%A8%20Chang%20Hi!5e0!3m2!1svi!2s!4v1698045834485!5m2!1svi!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer__one">
+            <h2
+                style="color: antiquewhite; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                Chang Hi</h2>
+            <p style="color: antiquewhite; font-size: 8px;">COPYRIGHT © 2023 CHANG HI VIỆT NAM</p>
+        </div>
+        <div class="footer__two">
+            <div class="contact">
+                <h3>CONTACT</h3>
+                <p>Phone Number: +0123445678</p>
+                <p>Address: 123ABC/Quocoai</p>
+                <p>Email: khuongdanhhoang123@gmai.com</p>
+            </div>
+            <div class="openHour">
+                <h3 style="font-size: 16px;">OPENING HOURS</h3>
+                <pre>Mon-Thu:  8am-9pm</pre>
+                <pre>Fri-Sat:  8am-1am</pre>
+                <pre>Sunday:   9am-11pm</pre>
+
+            </div>
+            <div class="followUs">
+                <h3>FOLLOW US</h3>
+                <a href="" class="nabbar__logo"><img src="/Project/img/facebook.png" alt="" class="logo__link"></a>
+                <a href="" class="nabbar__logo"><img src="/Project/img/instagram.png" alt="" class="logo__link"></a>
+                <!-- <a href="" class="nabbar__logo"><img src="/Project/img/instagram.png" alt="" class="logo__link"></a -->
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="/Project/JSS/menuFood.js"></script> -->
+    <script src="/Project/JS/trangchu.js"></script>
+    <script src="/Project/JS/address.js"></script>
+</body>
+
+</html>

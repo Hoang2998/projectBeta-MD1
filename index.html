@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChanghiQuocOai</title>
+    <link rel="icon" href="./Project/img/logoWeb.png">
+    <link rel="stylesheet" href="./Project/CSS/trangchu.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div><img src="./Project/img/logoWeb.png" alt="" id="header__logo"></div>
+        <div class="displayMenu" onclick="displayMenu()"><span class="material-symbols-outlined">
+            menu
+            </span></div>
+        <nav id="header__nabbar">
+            <a href="/index.html">Trang Chủ</a>
+            <a href="/Project/HTML/info.html">Giới Thiệu</a>
+            <a href="/Project/HTML/menu.html">Thực Đơn</a>
+            <a href="/Project/HTML/store.html">Cửa Hàng</a>
+            <a href="/Project/HTML/contact.html">Liên hệ</a>
+            <div style="position: relative;" onclick="changeCart()">
+                <span class="material-symbols-outlined bag">
+                    shopping_bag
+                </span>
+                <div id="alertProduct">0</div>
+            </div>
+        </nav>
+        <div class="bell" onclick="stopRingBell()">
+            <div class="bellalert">
+                <img src="./Project/img/bell.png" width="90%" height="90%">
+            </div>
+            <div id="numberAlertBell">0</div>
+        </div>
+        <div style="display: flex;align-items: center;"><img src="./Project/img/avatar.jpg" alt="" id="header__avatar"
+                onclick="openInfoUser()"><span id="nameUser"></span>
+        </div>
+        <button onclick="logOut()">Login</button>
+        <div id="displayAlertBell">
+            <div
+                style="display: flex;justify-content: center;align-items: center; border-bottom: 1px solid rgb(219, 202, 202);padding: 0.5vw 0;">
+                <p style="width: 80%;">
+                    Đơn hàng <span id="idBill">111</span> <span id="statusBill">da dc xu li</span>
+                </p>
+                <div style=" font-size: 0.8vw;">
+                    <div class="statusAlert">đã đọc </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- pop up infoUser-->
+    <div id="tableInfoUser">
+        <div class="imgAvatar"><img src="./Project/img/avatar1.jpg" alt="" width="120px" height="120px">
+            <label for="click">Thay ảnh đại diện</label>
+            <input type="file" id="click" onchange="changeAvatar(this)">
+        </div>
+        <div class="informationUser">
+            <h3>THÔNG TIN CÁ NHÂN</h3>
+            <label for="">Tên đăng nhập</label>
+            <input type="text" id="info__NameUser">
+            <label for="">Email</label>
+            <input type="text" id="info__EmailUser" oninput="checkEmailUser()">
+            <div id="alertInfoEmail"></div>
+            <div id="alertUpdate"></div>
+            <p>Đổi mật khẩu:</p>
+            <div class="newPassword">
+                <label for="">Mật khẩu hiện tại</label>
+                <input type="password" id="info_PasswordUser" oninput="checkPasswordUser()">
+                <div id="alertInfoPassword"></div>
+                <label for="">Mật khẩu mới</label>
+                <input type="password" id="info_PasswordUserNew" oninput="checkPasswordUserNew()">
+                <div id="alertInfoPasswordNew"></div>
+            </div style="display:flex">
+            <div style="display:flex">
+                <button onclick="updateUser()">Cập Nhập</button>
+                <button onclick="logOut()">Đăng xuất</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section class="section__one">
+        <img src="./Project/img/Sakura-Japan-PNG-Image.png" alt="" class="flower">
+        <img src="./Project/img/meoThantai.png!bw700" alt="" class="cat">
+        <!-- <img src="./Project/img/pngtree-traditional-japanese-wave-art-png-image_9162643.png" alt="" class="cat"> -->
+        <div><img src="./Project/img/trangtri.png" alt="" class="border"></div>
+        <div style="width: 85vw; height: 46vw;"><iframe
+                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftiemchengonchanghiquocoai%2Fvideos%2F444925930500377%2F&show_text=false&width=560&t=0"
+                width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowfullscreen="false" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture;"
+                allowFullScreen="true"></iframe></div>
+        <div><img src="./Project/img/trangtri.png" alt="" class="border"></div>
+        <div class="wavethree"></div>
+        <div class="wave"></div>
+        <div class="waveone"></div>
+        <div class="wavetwo"></div>
+    </section>
+    <section class="section__two">
+        <div class="section__two__one">
+            <h1> Chè Ngon Sáng Tạo </h1>
+        </div>
+        <div id="slider">
+            <div id="sliderImg">
+                <div>
+                    <img src="./Project/img/che1.jpg" alt="" class="sameImg">
+                </div>
+                <div>
+                    <img src="./Project/img/che2.jpg" alt="" class="sameImg">
+                </div>
+                <div>
+                    <img src="./Project/img/che3.jpg" alt="" class="sameImg">
+                </div>
+                <div>
+                    <img src="./Project/img/che4.jpg" alt="" class="sameImg">
+                </div>
+                <div>
+                    <img src="./Project/img/che5.jpg" alt="" class="sameImg">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="pre"> < </button>
+                <button id="next">></button>
+            </div>
+
+            <div class="dots">
+                <ul>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section__two__three">
+            <div style="color: rgb(225, 228, 230);">
+                <h2 style="color: antiquewhite; margin-bottom: 1vw ; margin-left: 5vw;margin-top: 5vw;">Nguyên liệu tươi
+                    sạch</h2>
+                <p style="width: 70%;margin-left: 5vw;"> Các nguyên liệu được nhập 100% sạch và chế biến cẩn thận không
+                    chất bảo quản tạo lên một hương vị tươi mới</p>
+            </div>
+            <div class="Qc">
+                <div class="sameQc qsone"><img src="./Project/img/tt1.jpg" alt="" width="100%"></div>
+                <div class="sameQc qstwo"><img src="./Project/img/tt2.jpg" alt="" width="100%"></div>
+                <div class="sameQc qsthree"><img src="./Project/img/tt3.jpg" alt="" width="100%"></div>
+                <div class="sameQc qsfour"><img src="./Project/img/tt4.jpg" alt="" width="100%"></div>
+            </div>
+        </div>
+
+    </section>
+    <section id="section__three">
+        <div class="item__one">
+            <h2><img src="./Project/img/teacup.png" alt="" width="30px">Ưu Đãi</h2>
+            <h3> Khám phá ngay các chương trình ưu đãi cực hấp dẫn của Chang Hi trong tháng này!
+            </h3>
+            <br>
+            <hr>
+            <p >Chào mừng bạn đến với chè ChangHi, hãy cùng khám phá những khuyến mãi và ưu đãi
+                của chúng tôi trong tháng này nhé.</p>
+        </div>
+        <div class="item__two">
+            <img src="./Project/img/sec31.jpg" width="100%" height="100%">
+        </div>
+        <div class="item__two">
+            <img src="./Project/img/sec32.jpg" width="100%" height="100%">
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer__one">
+            <h2
+                style="color: antiquewhite; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                Chang Hi</h2>
+            <p style="color: antiquewhite; font-size: 8px;">COPYRIGHT © 2023 CHANG HI VIỆT NAM</p>
+        </div>
+        <div class="footer__two">
+            <div class="contact">
+                <h3>CONTACT</h3>
+                <p>Phone Number: +0123445678</p>
+                <p>Address: 123ABC/Quocoai</p>
+                <p>Email: khuongdanhhoang123@gmai.com</p>
+            </div>
+            <div class="openHour">
+                <h3>OPENING HOURS</h3>
+                <pre>Mon-Thu:  8am-9pm</pre>
+                <pre>Fri-Sat:  8am-1am</pre>
+                <pre>Sunday:   9am-11pm</pre>
+
+            </div>
+            <div class="followUs">
+                <h3>FOLLOW US</h3>
+                <a href="" class="nabbar__logo"><img src="./Project/img/facebook.png" alt="" class="logo__link"></a>
+                <a href="" class="nabbar__logo"><img src="./Project/img/instagram.png" alt="" class="logo__link"></a>
+                <!-- <a href="" class="nabbar__logo"><img src="./Project/img/instagram.png" alt="" class="logo__link"></a -->
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="./Project/JS/menuFood.js"></script> -->
+    <script src="./Project/JS/trangchu.js"></script>
+    <script src="./Project/JS/menu.js"></script>
+    <script src="./Project/JS/cart.js"></script>
+</body>
+
+</html>

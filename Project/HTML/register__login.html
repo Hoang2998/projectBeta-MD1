@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChanghiQuocOai</title>
+    <link rel="icon" href="../img/logoWeb.png">
+    <link rel="stylesheet" href="../CSS/register.css">
+</head>
+<body>
+    <div class="container right-panel-active">
+        <!-- Đăng Ký -->
+        <div class="container__form container--signup">
+            <form action="#" class="form" id="form1">
+                <h2 class="form__title">Đăng Ký</h2>
+                <input type="text" placeholder="Tên đăng nhập" class="input"  id="signUpName" />
+                <input type="email" placeholder="Email: ...@gmail.com" class="input" oninput="signUp__checkEmail()" id="signUpEmail" />
+                <div id="signUp__AlertEmail" class="alert"></div>
+                <div class="accept"><img src="../img/accept.jpg" alt=""></div>
+                <input type="password" placeholder="Mật khẩu: (bao gồm 8 Kí tự )" class="input" oninput="signUp__checkPassword()" id="signUpPassword" maxlength="8" />
+                <div id="signUp__AlertPassword" class="alert">
+                    <ul style="text-align: left;font-size: 10px;">
+                        <li>Bắt buộc có ít nhất 1 kí tự đặc biệt.</li>
+                        <li>Bắt buộc có ít nhất 1 kí tự chữ viết hoa.</li>
+                        <li>Có kí tự chữ và số </li>
+                    </ul>
+                </div>
+                <input type="password" placeholder="Nhập lại mật khẩu" class="input" oninput="signUp__checkPassword2()" id="signUpPassword2" maxlength="8" />
+                <div id="signUp__AlertPassword2" class="alert"></div>
+                <button class="btn" onclick="addUser()">Đăng Ký</button>
+            </form>
+        </div>
+    
+        <!-- Dăng Nhập -->
+        <div class="container__form container--signin">
+            <form action="#" class="form" id="form2">
+                <h2 class="form__title">Đăng Nhập</h2>
+                <input type="email" placeholder="Email" class="input" oninput="signIn__checkEmail()" id="signInEmail" />
+                <div id="signIn__AlertEmail" class="alert"></div>
+                <div class="accept"><img src="../img/accept.jpg" alt=""></div>
+                <input type="password" placeholder="Mật Khẩu" class="input" oninput="signIn__checkPassword()" id="signInPassword" maxlength="8"/>
+                <div id="signIn__AlertPassword" class="alert"></div>
+                <a href="#" class="link">Quên mật khẩu ???</a>
+                <button class="btn" onclick="changePage()">Đăng nhập</button>
+            </form>
+        </div>
+    
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn" id="signIn">Dăng Nhập</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <button class="btn" id="signUp">Đăng Ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/register__login.js"></script>
+</body>
+</html>

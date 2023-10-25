@@ -1,0 +1,585 @@
+.menu__main{
+    padding-top:60px ;
+    position: relative;
+}
+html{
+    scroll-behavior: smooth;
+}
+.tagMenu{
+    /* background-color:wheat; */
+    color: rgb(10, 84, 10);
+    font-weight: 900;
+    position: absolute;
+    padding: 5px;
+    display: flex;
+    gap: 0.5vw;
+    top: 16vw;
+    /* left: 50px; */
+}
+#inputFind{
+    color: rgb(10, 84, 10);
+    border-color: rgb(10, 84, 10) ;
+    width: 10vw;
+    position: absolute;
+    display: none;
+    right: 1vw;
+  
+}
+.findMenu{
+    margin-left: 0.5vw !important;
+    font-size: 0.5vw;
+    color: rgb(10, 84, 10);   
+}
+
+
+
+
+
+
+
+.tagMenu:hover{
+    #menu__che{
+        opacity: 1;
+        transition: 0.5s;
+    };
+    #menu__trasua{
+        opacity: 1;
+        transition: 1s;
+    };
+    #menu__dav{
+        opacity: 1;
+        transition: 1.5s;
+    }
+}
+#menu__che:hover{
+    color: antiquewhite;
+    background-color:rgb(10, 84, 10) ;
+}
+#menu__trasua:hover{
+    color: antiquewhite;
+    background-color:rgb(10, 84, 10) ;
+}#menu__dav:hover{
+    color: antiquewhite;
+    background-color:rgb(10, 84, 10) ;
+}
+.tagMenu a{
+    background-color:rgba(230, 210, 173,0.8) ;
+    /* border: 1px solid rgb(10, 84, 10); */
+    color: rgb(10, 84, 10);
+    text-decoration: none;
+    padding: 0.5vw;
+    width: 8vw;
+    font-size: 1.5vw;
+    text-align: center;
+    opacity: 0;
+}
+
+.menuOrder{
+    background-color:rgba(230, 210, 173,0.6) ;
+    /* border: 1px solid rgb(10, 84, 10); */
+    padding: 0.5vw;
+    width: 10vw;
+    font-size: 1.5vw;
+    text-align: center;
+}
+.menuOrder:hover{
+    color: antiquewhite;
+    background-color:rgb(10, 84, 10) ;
+}
+
+
+
+
+
+#findFood{
+    height: 0px;
+    transition: all 0.5s linear;
+}
+.blockFind{
+    width: 100%;
+    background-color: rgb(221, 160, 81);
+    border-bottom: 1px solid rgb(245, 218, 167);
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 2px;
+}
+#find__display{
+    display: flex;
+    justify-content: center;
+    gap:3vw;
+    padding-top: 5vw;
+}
+.find__button{
+    position: absolute;
+    width: 94%;
+    left:3%;
+    display: flex;
+    justify-content: space-between;
+    top: 40%;
+}
+.find__button button{
+    font-family: monospace;
+    font-weight: 0.8;
+    border: none;
+    width: 3vw;
+    height: 4vw;
+    border-radius: 8px;
+    color: antiquewhite;
+    background-color:rgba(10, 84, 10,0.6) ;
+}
+.find__button button:hover{
+    background-color:rgba(10, 84, 10,1) ;
+}
+#dotsProductFind{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    gap: 10px;
+}
+.dotFind{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color:rgba(10, 84, 10,0.6) ;
+}
+.dotFind:hover{
+    background-color:rgb(10, 84, 10) ;
+}
+
+
+
+
+
+#che{
+    width: 100%;
+    background-color: rgb(232, 213, 189);
+    border-bottom: 1px solid rgb(245, 218, 167);
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 2px;
+
+}
+
+
+.che__find{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    background-color: rgba(10, 84, 10,0.8);
+    justify-content: right;
+    right: 2vw;
+    border-radius: 20px 0 20px 0;
+    top:-2vw;
+}
+.che__find label{
+    width: 20vw;
+    text-align: center;
+    font-weight: bold;
+    color: wheat;
+    font-size: 2vw;
+    padding: 0.5vw 2vw ;
+}
+#cheFind{
+    background-color: rgba(10, 84, 10,0.8);
+    border: none;
+    border-radius: 10px;
+    color: wheat;
+}
+.che__find span{
+    color: wheat;
+    padding: 0 5px;
+}
+#che__display{
+    display: flex;
+    justify-content: center;
+    gap:3vw;
+    padding-top: 5vw;
+
+}
+.che__button{
+    position: absolute;
+    width: 94%;
+    left:3%;
+    display: flex;
+    justify-content: space-between;
+    top: 40%;
+}
+.che__button button{
+    font-family: monospace;
+    font-weight: 0.8;
+    border: none;
+    width: 3vw;
+    height: 4vw;
+    border-radius: 8px;
+    color: antiquewhite;
+    background-color:rgba(10, 84, 10,0.6) ;
+}
+.che__button button:hover{
+    background-color:rgba(10, 84, 10,1) ;
+}
+
+#infoProduct{
+    width: 0vw;
+    height: 0vw;
+    font-size: 1vw;
+    position: fixed;
+    top:8vw;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+
+}
+.bginfoProduct{
+    background-color:rgba(10, 84, 10,0.9) ;
+    margin: 2vw;
+    padding: 5vw;
+    z-index: 2;
+}
+
+.contain__info{
+    position: relative;
+    display: flex;
+    gap: 3vw;
+    color: antiquewhite;
+}
+.contain__info pre{
+    font-size: 1.2vw;
+
+    margin-top: 1vw;
+}
+.contain__info p{
+    font-size: 1.2vw;
+
+    margin-bottom: 1vw;
+}
+.infoImg{
+    width: 23vw;
+    height: 23vw;
+}
+
+.contain__infoProduct{
+    padding-top:2vw ;
+}
+
+.alertAddProduct{
+    position: absolute;
+    background-color: rgba(19, 18, 18,0.92);
+    color: white;
+    width: 30vw;
+    height: 15vw;
+    bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 28vw;
+    visibility: hidden;
+}
+.effecta{
+    visibility: visible;
+    animation: effect 1s;
+}
+@keyframes effect {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.btn{
+    background-color:rgba(10, 84, 10,1) ;
+    color: antiquewhite;
+    border-color: antiquewhite;
+    border-radius: 5px;
+}
+#inputQuantity{
+    width: 30px;
+    text-align: center;
+    background-color:rgba(10, 84, 10,1) ;
+    border: none;
+    color: antiquewhite;
+
+}
+#addProduct{
+    text-align: center;
+    background-color:rgba(10, 84, 10,1) ;
+    border-color: rgb(235, 219, 199);
+    color: antiquewhite;
+    padding: 5px 10px;
+    position: absolute;
+    border-radius: 5px;
+    right: 5vw;
+}
+
+.product{
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    box-shadow: 1vw 1vw 4px 2px  rgb(58, 57, 57,0.5);
+}
+
+.hotSale{
+    position: absolute;
+}
+.productSame{
+    width: 100%;
+    height: 100%;
+}
+.addProduct{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: none;
+    background-color:rgba(10, 84, 10,0.8);
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    left: 10%;
+    top: 10%;
+    opacity: 0;
+}
+.addProduct:hover{
+    opacity: 1;
+}
+
+.close{
+    position: absolute;
+    right: -2vw;
+    top:-2vw;
+    font-size: 16px !important;
+}
+#dotsProduct{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    gap: 10px;
+}
+.dotChe{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color:rgba(10, 84, 10,0.6) ;
+}
+.dotChe:hover{
+    background-color:rgb(10, 84, 10) ;
+}
+/* .changeColor{
+    background-color:rgb(10, 84, 10) ;
+} */
+
+
+
+
+
+
+
+#traSua{
+    width: 100%;
+    background-color: rgb(241, 218, 189);
+    border-bottom: 1px solid rgb(245, 218, 167);
+    position: relative;
+    padding-bottom: 4vw;
+    margin-bottom: 2px;
+
+}
+.traSua__find{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    background-color: rgba(10, 84, 10,0.8);
+    justify-content: left;
+    left: 2vw;
+    top:-2vw;
+    border-radius: 0 20px 0 20px;
+}
+.traSua__find label{
+    font-weight: bold;
+    color: wheat;
+    font-size: 2vw;
+    padding: 0.5vw 2vw ;
+    width: 20vw;
+    text-align: center;
+}
+#traSuaFind{
+    background-color: rgba(10, 84, 10,0.8);
+    border: none;
+    border-radius: 10px;
+    color: wheat;
+}
+.traSua__find span{
+    color: wheat;
+    padding: 0 5px;
+}
+#traSua__display{
+    display: flex;
+    justify-content: center;
+    gap:3vw;
+    padding-top: 5vw;
+
+}
+.traSua__button{
+    position: absolute;
+    width: 94%;
+    left:3%;
+    display: flex;
+    justify-content: space-between;
+    top: 40%;
+}
+.traSua__button button{
+    font-family: monospace;
+    font-weight: 0.8;
+    border: none;
+    width: 3vw;
+    height: 4vw;
+    border-radius: 8px;
+    color: antiquewhite;
+    background-color:rgba(10, 84, 10,0.6) ;
+}
+.traSua__button button:hover{
+    background-color:rgba(10, 84, 10,1) ;
+}
+#dotsProductTra{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    gap: 10px;
+}
+.dotTrasua{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color:rgba(10, 84, 10,0.6) ;
+}
+.dotTrasua:hover{
+    background-color:rgb(10, 84, 10) ;
+}
+.changeColor{
+    background-color:rgb(10, 84, 10) !important;
+}
+
+
+
+#dav{
+    width: 100%;
+    background-color: rgb(237, 220, 198);
+    border-bottom: 1px solid rgb(245, 218, 167);
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 2px;
+}
+.dav__find{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    background-color: rgba(10, 84, 10,0.8);
+    justify-content: right;
+    right: 15px;
+    top:-15px;
+    border-radius: 20px 0 20px 0;
+    
+}
+.dav__find label{
+    width: 20vw;
+    text-align: center;
+    font-weight: bold;
+    color: wheat;
+    font-size: 2vw;
+    padding: 0.5vw 2vw ;
+}
+#dav__display{
+    display: flex;
+    justify-content: center;
+    gap:3vw;
+    padding-top: 5vw;
+
+}
+#dav__display{
+    display: flex;
+    justify-content: center;
+    gap:3vw;
+    padding-top: 5vw;
+
+}
+.dav__button{
+    position: absolute;
+    width: 94%;
+    left:3%;
+    display: flex;
+    justify-content: space-between;
+    top: 40%;
+}
+.dav__button button{
+    font-family: monospace;
+    font-weight: 0.8;
+    border: none;
+    width: 3vw;
+    height: 4vw;
+    border-radius: 8px;
+    color: antiquewhite;
+    background-color:rgba(10, 84, 10,0.6) ;
+}
+.dav__button button:hover{
+    background-color:rgba(10, 84, 10,1) ;
+}
+#dotsProductDav{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    gap: 10px;
+}
+.dav__find span{
+    color: wheat;
+    padding: 0 5px;
+}
+.dotDav{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color:rgba(10, 84, 10,0.6) ;
+}
+.dotDav:hover{
+    background-color:rgb(10, 84, 10) ;
+}
+
+
+.backHome{
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+}
+.return{
+    background-color: rgba(165, 42, 42,0.8);
+    color: rgb(229, 239, 248,0.5);
+    font-size: 20px !important;
+    padding: 10px;
+    visibility: hidden;
+
+}
+.return:hover{
+    color: rgb(229, 239, 248,1);
+    background-color: rgba(165, 42, 42,1);
+
+}
+
+.slideUp {
+    animation-name: slideUp;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-duration: 1s;
+    visibility: visible;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
